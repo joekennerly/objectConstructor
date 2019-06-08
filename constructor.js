@@ -1,15 +1,12 @@
-// Using () => doesn't evoke a function scope for "this"
-
-function createObject(firstName, lastName, age, id) {
+function Object(firstName, lastName, age, id) {
+  // let this = {}
   this.firstName = firstName;
   this.lastName = lastName;
   this.age = age;
   this.id = id;
+  // return this
 }
 
-// The "new" keyword tells JS to create a variable called "this", 
-// which is an obj, and return it after paramaters are entered
-
-let newObj = new createObject("Joe", "K.", 30, 80999932);
+let newObj = new Object("Joe", "K.", 30, 80999932);
 
 console.log(newObj);
